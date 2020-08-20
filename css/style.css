@@ -1,0 +1,71 @@
+/*Colors*/
+/*
+Light Green: #7ed56f
+Medium Green: #55c57a
+Dark Green: #28b485
+*/
+
+/*universal selector*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #777;
+    padding: 25px;
+}
+
+/*header section starts*/
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right top, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nature.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); /*x y, x y, x y*/
+    /*clip-path: ellipse(70% 55% at 34% 56%);*/
+}
+
+.logo-container {
+    position: absolute;
+    left: 40px;
+    top: 40px;
+}
+
+.logo {
+    height: 35px;
+}
+
+.banner {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.heading {
+    color: white;
+    text-transform: uppercase;
+}
+
+.primary {
+    display: block;
+    font-size: 45px;
+    font-weight: 400;
+    letter-spacing: 35px;
+}
+
+.sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 8.3px;
+}
+
+/*header section ends*/
