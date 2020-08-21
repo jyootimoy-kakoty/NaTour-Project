@@ -32,6 +32,7 @@ body {
     /*clip-path: ellipse(70% 55% at 34% 56%);*/
 }
 
+/*logo section starts*/
 .logo-container {
     position: absolute;
     left: 40px;
@@ -41,14 +42,18 @@ body {
 .logo {
     height: 35px;
 }
+/*logo section ends*/
 
+/*banner section starts*/
 .banner {
     position: absolute;
     left: 50%;
-    top: 40%;
+    top: 35%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
+/*banner heading starts*/
 .heading {
     color: white;
     text-transform: uppercase;
@@ -56,16 +61,111 @@ body {
 
 .primary {
     display: block;
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 30px;
+    text-align: justify;
+
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
 }
 
 .sub {
     display: block;
-    font-size: 20px;
-    font-weight: 400;
-    letter-spacing: 8.3px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 7px;
+    text-align: justify;
+
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
 }
 
+.sub span {
+    letter-spacing: 4px;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/*banner heading ends*/
+/*banner button starts*/
+.btn:link,
+.btn:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 15px 40px;
+    border-radius: 100px;
+    margin-top: 30px;
+
+    transition: all .2s ease-out;
+}
+
+.btn-white {
+    background-color: white;
+    color: black;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(1px) scale(.7);
+    opacity: 0;
+    
+}
+
+.btn-animated {
+    animation: moveUp .5s ease-out .75s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*banner button ends*/
+/*banner section ends*/
 /*header section ends*/
