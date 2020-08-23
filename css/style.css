@@ -13,7 +13,8 @@ Dark Green: #28b485
 }
 
 html {
-    font-size: 10px;
+    /*font-size: 10px;*/
+    font-size: 62.5%; /*62.5% of 16px is 10px*/
 }
 
 body {
@@ -145,7 +146,7 @@ body {
 }
 
 .btn:hover {
-    transform: translateY(-3px);
+    transform: translateY(-.3rem);
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
