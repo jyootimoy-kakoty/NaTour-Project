@@ -6,10 +6,12 @@ Dark Green: #28b485
 */
 
 /*universal selector*/
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit; /*border-box value, declared in body selector, will be inherited to all selectors where box-sizing property is used*/ 
 }
 
 html {
@@ -24,6 +26,8 @@ body {
     line-height: 1.7;
     color: #777;
     padding: 2.5rem;
+
+    box-sizing: border-box;
 }
 
 /*header section starts*/
