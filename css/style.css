@@ -12,13 +12,17 @@ Dark Green: #28b485
     box-sizing: border-box;
 }
 
+html {
+    font-size: 10px;
+}
+
 body {
     font-family: "Lato", sans-serif;
-    font-size: 16px;
+    /*font-size: 16px;*/
     font-weight: 400;
     line-height: 1.7;
     color: #777;
-    padding: 25px;
+    padding: 2.5rem;
 }
 
 /*header section starts*/
@@ -35,12 +39,12 @@ body {
 /*logo section starts*/
 .logo-container {
     position: absolute;
-    left: 40px;
-    top: 40px;
+    left: 4rem;
+    top: 4rem;
 }
 
 .logo {
-    height: 35px;
+    height: 3.5rem;
 }
 /*logo section ends*/
 
@@ -61,9 +65,9 @@ body {
 
 .primary {
     display: block;
-    font-size: 40px;
+    font-size: 4rem;
     font-weight: 400;
-    letter-spacing: 30px;
+    letter-spacing: 3rem;
     text-align: justify;
 
     animation-name: moveInLeft;
@@ -73,9 +77,9 @@ body {
 
 .sub {
     display: block;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 500;
-    letter-spacing: 7px;
+    letter-spacing: .7rem;
     text-align: justify;
 
     animation-name: moveInRight;
@@ -84,18 +88,18 @@ body {
 }
 
 .sub span {
-    letter-spacing: 4px;
+    letter-spacing: .4rem;
 }
 
 @keyframes moveInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
 
     80% {
         opacity: 1;
-        transform: translateX(10px);
+        transform: translateX(1rem);
     }
 
     100% {
@@ -107,12 +111,12 @@ body {
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
 
     80% {
         opacity: 1;
-        transform: translateX(-10px);
+        transform: translateX(-1rem);
     }
 
     100% {
@@ -127,9 +131,10 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     display: inline-block;
-    padding: 15px 40px;
-    border-radius: 100px;
-    margin-top: 30px;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+    margin-top: 3rem;
+    font-size: 1.6rem;
 
     transition: all .2s ease-out;
 }
@@ -141,11 +146,11 @@ body {
 
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .btn:active {
-    transform: translateY(1px) scale(.7);
+    transform: translateY(.1rem) scale(.7);
     opacity: 0;
     
 }
@@ -158,7 +163,7 @@ body {
 @keyframes moveUp {
     0% {
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(5rem);
     }
 
     100% {
