@@ -42,19 +42,19 @@ body {
 }
 
 /*logo section starts*/
-.logo-container {
+.header__logo-container {
     position: absolute;
     left: 4rem;
     top: 4rem;
 }
 
-.logo {
+.header__logo {
     height: 3.5rem;
 }
 /*logo section ends*/
 
 /*banner section starts*/
-.banner {
+.header__banner {
     position: absolute;
     left: 50%;
     top: 35%;
@@ -68,7 +68,7 @@ body {
     text-transform: uppercase;
 }
 
-.primary {
+.heading--primary {
     display: block;
     font-size: 4rem;
     font-weight: 400;
@@ -80,7 +80,7 @@ body {
     animation-timing-function: ease-in-out;
 }
 
-.sub {
+.heading--sub {
     display: block;
     font-size: 1.8rem;
     font-weight: 500;
@@ -92,7 +92,7 @@ body {
     animation-timing-function: ease-in-out;
 }
 
-.sub span {
+.heading--sub span {
     letter-spacing: .4rem;
 }
 
@@ -144,7 +144,7 @@ body {
     transition: all .2s ease-out;
 }
 
-.btn-white {
+.btn--white {
     background-color: white;
     color: black;
 }
@@ -160,7 +160,7 @@ body {
     
 }
 
-.btn-animated {
+.btn--animated {
     animation: moveUp .5s ease-out .75s;
     animation-fill-mode: backwards;
 }
