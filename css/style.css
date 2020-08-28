@@ -1,10 +1,3 @@
-/*Colors*/
-/*
-Light Green: #7ed56f
-Medium Green: #55c57a
-Dark Green: #28b485
-*/
-
 /*universal selector*/
 *,
 *::before,
@@ -19,12 +12,30 @@ html {
     font-size: 62.5%; /*62.5% of 16px is 10px*/
 }
 
+
+:root {
+    --Light-Green: #7ed56f;
+    --Medium-Green: #55c57a;
+    --Dark-Green: #28b485;
+
+    --Grey-Light1: #f7f7f7;
+    --Grey-Dark: #777;
+    --Color-White: #fff;
+    --Color-Black: #000;
+
+    --Grid-Width: 114rem;
+    --Gutter-Horizontal: 4rem;
+    --Gutter-Vertical: 8rem;
+
+    --default-font-size: 1.6rem;
+}
+
 body {
     font-family: "Lato", sans-serif;
     /*font-size: 16px;*/
     font-weight: 400;
     line-height: 1.7;
-    color: #777;
+    color: var(--Grey-Dark);
     padding: 2.5rem;
 
     box-sizing: border-box;
@@ -64,7 +75,7 @@ body {
 
 /*banner heading starts*/
 .heading {
-    color: white;
+    color: var(--Color-White);
     text-transform: uppercase;
 }
 
@@ -139,14 +150,14 @@ body {
     padding: 1.5rem 4rem;
     border-radius: 10rem;
     margin-top: 3rem;
-    font-size: 1.6rem;
+    font-size: var(--default-font-size);
 
     transition: all .2s ease-out;
 }
 
 .btn--white {
-    background-color: white;
-    color: black;
+    background-color: var(--Color-White);
+    color: var(--Color-Black);
 }
 
 .btn:hover {
@@ -179,3 +190,149 @@ body {
 /*banner button ends*/
 /*banner section ends*/
 /*header section ends*/
+
+/*main section starts*/
+/*utility class section starts*/
+
+/*utility class section ends*/
+.util-center-text {
+    text-align: center;
+}
+
+.util-margin-bottom-big {
+    margin-bottom: 8rem;
+}
+
+.util-margin-bottom-medium {
+    margin-bottom: 4rem;
+}
+
+.util-margin-bottom-small {
+    margin-bottom: 1.5rem;
+}
+
+/*about section starts*/
+.section-about {
+    background-color: var(--Grey-Light1);
+    padding: 30rem 0 20rem 0;
+    margin-top: -25vh;
+}
+
+.section-heading {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, var(--Light-Green), var(--Dark-Green));
+    display: inline-block;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.row {
+    max-width: var(--Grid-Width);
+    margin: 0 auto;
+
+    /*float clearfix new way starts*/
+    overflow: hidden;
+    width: 100%;
+    /*float clearfix new way ends*/
+}
+
+.col-1-of-2 {
+    width: calc((100% - var(--Gutter-Horizontal)) / 2);
+}
+
+[class^="col-"] {
+    float: left;
+}
+
+/*float clearfix old way starts*/
+/*[class^="col-"]::after {
+    content: "";
+    display: table;
+    clear: both;
+}*/
+/*float clearfix old way ends*/
+
+[class^="col-"]:not(:last-child){
+    margin-right: var(--Gutter-Horizontal);
+}
+
+.paragraph-heading {
+    font-size: var(--default-font-size);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: var(--default-font-size);
+}
+
+.paragraph:not(:last-child){
+    margin-bottom: 3rem;
+}
+
+.btn-text:link,
+.btn-text:visited {
+    font-size: var(--default-font-size);
+    color: var(--Medium-Green);
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid var(--Medium-Green);
+    padding: 3px;
+    margin: 0 auto;
+    border-radius: 0;
+
+    transition: all .2s ease-out;
+}
+
+.btn-text:hover {
+    color: var(--Color-White);
+    background-color: var(--Medium-Green);
+    transform: translateY(-.3rem);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.composition {
+    position: relative;
+}
+
+.composition__photo {
+    width: 50%;
+    border-radius: 2px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .2);
+    position: absolute;
+
+    z-index: 10;
+    transition: all .2s;
+    outline-offset: 1.5rem;
+}
+
+.composition__photo--p1 {
+    left: 5%;
+    top: 3.5rem;
+}
+
+.composition__photo--p2 {
+    right: 8%;
+    top: 5.5rem;
+}
+
+.composition__photo--p3 {
+    left: 20%;
+    top: 10rem;
+}
+
+.composition__photo:hover {
+    transform: scale(1.05) translate(.5rem);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, .2);
+    z-index: 20;
+    outline: 1.5rem solid var(--Medium-Green);
+    
+}
+
+.composition:hover .composition__photo:not(:hover){
+    transform: scale(.95);
+}
+/*about section ends*/
+/*main section ends*/
