@@ -24,7 +24,7 @@ html {
     --Color-Black: #000;
 
     --Grid-Width: 114rem;
-    --Gutter-Horizontal: 4rem;
+    --Gutter-Horizontal: 6rem;
     --Gutter-Vertical: 8rem;
 
     --default-font-size: 1.6rem;
@@ -48,7 +48,7 @@ body {
     background-size: cover;
     background-position: top;
     position: relative;
-    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); /*x y, x y, x y*/
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); /*x y, x y, x y, x y*/
     /*clip-path: ellipse(70% 55% at 34% 56%);*/
 }
 
@@ -215,7 +215,7 @@ body {
 .section-about {
     background-color: var(--Grey-Light1);
     padding: 30rem 0 20rem 0;
-    margin-top: -25vh;
+    margin-top: -25rem;
 }
 
 .section-heading {
@@ -231,10 +231,11 @@ body {
 .row {
     max-width: var(--Grid-Width);
     margin: 0 auto;
+    padding: 2rem;
 
     /*float clearfix new way starts*/
     overflow: hidden;
-    width: 100%;
+   /*width: 100%;*/
     /*float clearfix new way ends*/
 }
 
@@ -247,11 +248,11 @@ body {
 }
 
 /*float clearfix old way starts*/
-/*[class^="col-"]::after {
+[class^="col-"]::after {
     content: "";
     display: table;
     clear: both;
-}*/
+}
 /*float clearfix old way ends*/
 
 [class^="col-"]:not(:last-child){
@@ -335,4 +336,54 @@ body {
     transform: scale(.95);
 }
 /*about section ends*/
+
+/*feature section starts*/
+.section-features {
+    height: 95vh;
+    margin-top: -10rem;
+    padding: 20rem 0 20rem 0;
+    background-image: linear-gradient(to right top, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+
+    transform: skewY(-7deg);
+    /*clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); /*x y, x y, x y, x y*/
+}
+
+.section-features > * {
+    transform: skewY(7deg);
+}
+
+.col-1-of-4 {
+    width: calc((100% - (3 * var(--Gutter-Horizontal))) / 4);
+}
+
+
+.feature-box {
+    background-color: rgba(255, 255, 255, .8);
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+
+    transition: transform .3s;
+}
+
+.feature-box__icon {
+    font-size: 6rem;
+    background-image: linear-gradient(to right, var(--Light-Green), var(--Dark-Green));
+    display: inline-block;
+    -webkit-background-clip: text;
+    color: transparent; 
+}
+
+.feature-box:hover {
+    transform: scale(1.05) translateY(-1.5rem);
+}
+/*feature section ends*/
+
+/*feature section starts*/
+/*feature section ends*/
 /*main section ends*/
